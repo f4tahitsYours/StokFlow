@@ -63,3 +63,12 @@ modules/<domain>/
 - Overengineered patterns
 
 Keep it simple, secure, and maintainable.
+
+---
+
+## UI Design Reference
+
+For all UI/UX implementation decisions, consult:
+- **design.md** — Comprehensive UI design specification, component library, and design tokens
+
+Do NOT create separate or conflicting design systems in steering files.
