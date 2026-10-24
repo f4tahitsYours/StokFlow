@@ -1,0 +1,44 @@
+{
+  "name": "stokflow",
+  "version": "1.0.0",
+  "description": "Client-specific inventory and sales management system",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:web\"",
+    "dev:server": "npm run dev --workspace=@stokflow/server",
+    "dev:web": "npm run dev --workspace=@stokflow/web",
+    "build": "npm run build --workspaces --if-present",
+    "build:server": "npm run build --workspace=@stokflow/server",
+    "build:web": "npm run build --workspace=@stokflow/web",
+    "test": "npm run test --workspaces --if-present",
+    "test:server": "npm run test --workspace=@stokflow/server",
+    "test:web": "npm run test --workspace=@stokflow/web",
+    "lint": "npm run lint --workspaces --if-present",
+    "lint:fix": "npm run lint:fix --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "husky": "9.1.7",
+    "lint-staged": "17.6.0",
+    "prettier": "^3.4.2"
+  },
+  "keywords": [
+    "inventory",
+    "sales",
+    "management"
+  ],
+  "author": "StokFlow Team",
+  "license": "UNLICENSED"
+}
