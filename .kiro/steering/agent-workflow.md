@@ -1,9 +1,3 @@
----
-inclusion: auto
-name: agent-workflow
-description: Agent workflow optimization and command grouping guidelines
----
-
 # Agent Workflow Optimization
 
 **Purpose:** Reduce redundant operations, group related commands, and improve execution efficiency.
@@ -194,6 +188,33 @@ If file content is in context and unchanged:
 - Run quick validations before expensive operations
 - Check prerequisites before starting work
 - Validate inputs before processing
+
+---
+
+## Error Recovery Strategy
+
+### When Commands Fail
+1. **Read Error Output:** Analyze actual error message, don't guess
+2. **Check Prerequisites:** Dependencies installed? Environment configured?
+3. **Try Alternative:** If blocked, attempt different approach
+4. **Report Specifics:** Share error details and context if stuck
+
+### When Tests Fail
+1. **Read Test Output:** Examine failure message carefully
+2. **Fix Root Cause:** Address the issue, never disable tests
+3. **Re-run Affected:** Test only what changed
+4. **Verify No Regression:** Ensure fix doesn't break other tests
+
+### When Build Fails
+1. **Check Error Location:** File path and line number
+2. **Verify Syntax:** TypeScript/ESLint errors
+3. **Check Dependencies:** Missing imports or packages
+4. **Incremental Fix:** Solve one error at a time
+
+### When Stuck
+- State what was tried and what failed
+- Ask for guidance with specific error context
+- Don't repeatedly try the same failing approach
 
 ---
 
