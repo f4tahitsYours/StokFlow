@@ -1,8 +1,34 @@
 # StokFlow — Inventory & Sales Management System
 
-**Version:** 1.0.0 (Phase 0 — Foundation)  
-**Status:** In Development  
+**Version:** 1.0.0 (Phase 0 — Foundation)
+**Status:** Documentation Phase Complete
 **Project Type:** Client-Specific Application
+
+---
+
+## ⚠️ Current Project Status
+
+**Phase 0 (Foundation) — COMPLETE:** Documentation and project planning phase is complete.
+
+**Phase 1 (Implementation) — NOT STARTED:** Application structure, source code, and npm configuration have not yet been created.
+
+**The commands listed in this README are for future reference and will become functional after Phase 1 initialization.**
+
+Currently available in this repository:
+- ✅ Comprehensive project documentation (PRD, architecture, security policy)
+- ✅ Implementation roadmap (todo.md)
+- ✅ Development workflow and standards (workflow.md, skill.md)
+- ✅ Kiro steering files for AI-assisted development
+- ✅ Environment configuration templates
+
+Not yet available:
+- ❌ Application source code (`apps/web/`, `apps/server/`)
+- ❌ npm workspace configuration (`package.json`)
+- ❌ TypeScript configuration (`tsconfig.json`)
+- ❌ Development dependencies and tools
+- ❌ Database schema or migrations
+
+**Next Steps:** Phase 1 will initialize the npm workspace, create application structure, and install dependencies.
 
 ---
 
@@ -82,7 +108,9 @@ StokFlow/
 
 ---
 
-## Getting Started
+## Getting Started (Phase 1+)
+
+**Note:** The following setup instructions will become applicable after Phase 1 initialization creates the necessary project structure and configuration files.
 
 ### 1. Clone Repository
 
@@ -91,7 +119,9 @@ git clone <repository-url>
 cd StokFlow
 ```
 
-### 2. Install Dependencies
+### 2. Install Dependencies (Phase 1+)
+
+**Prerequisites:** `package.json` must be created in Phase 1.
 
 ```bash
 npm install
@@ -132,7 +162,9 @@ CORS_ORIGIN="http://localhost:5173"
 - Generate a secure random string for `SESSION_SECRET` (use `openssl rand -base64 32`)
 - Never commit the `.env` file to Git
 
-### 4. Set Up Database
+### 4. Set Up Database (Phase 2+)
+
+**Prerequisites:** Database schema must be designed in Phase 2.
 
 Create the PostgreSQL database:
 
@@ -146,7 +178,9 @@ Or using psql:
 CREATE DATABASE stokflow_dev;
 ```
 
-### 5. Run Database Migrations
+### 5. Run Database Migrations (Phase 2+)
+
+**Prerequisites:** Prisma schema and migrations must be created in Phase 2.
 
 ```bash
 npm run db:migrate:dev
@@ -154,7 +188,7 @@ npm run db:migrate:dev
 
 This will apply Prisma migrations to set up the database schema.
 
-### 6. (Optional) Seed Database
+### 6. (Optional) Seed Database (Phase 2+)
 
 If a seed script is available:
 
@@ -162,7 +196,9 @@ If a seed script is available:
 npm run db:seed
 ```
 
-### 7. Start Development Servers
+### 7. Start Development Servers (Phase 1+)
+
+**Prerequisites:** Application code must be created in Phase 1+.
 
 Start both frontend and backend in development mode:
 
@@ -186,7 +222,9 @@ npm run dev:web
 
 ---
 
-## Available Commands
+## Available Commands (Phase 1+)
+
+**Note:** These commands will be configured in Phase 1 when `package.json` and npm scripts are created. They are listed here for reference.
 
 ### Development
 
@@ -454,19 +492,28 @@ npm run build
 
 ## Project Status
 
-**Current Phase:** Phase 0 — Foundation (Documentation & Setup)
+**Current Phase:** Phase 0 — Foundation (COMPLETE)
 
-**Completed:**
+**Phase 0 Completed:**
 - ✅ Repository structure defined
-- ✅ Documentation created (PRD, architecture, security, roadmap)
+- ✅ Comprehensive documentation created (PRD, architecture, security, roadmap)
 - ✅ Technology stack decided
+- ✅ Git repository initialized
+- ✅ Kiro steering files configured
+- ✅ Documentation audit completed
 
-**Next Steps:**
-1. Complete Phase 0 documentation audit
-2. Initialize npm workspace
-3. Set up frontend and backend projects
-4. Configure development tooling
-5. Design and implement database schema
+**Phase 1 Status:** NOT STARTED
+
+Phase 1 will create:
+- npm workspace configuration (`package.json`)
+- Application directory structure (`apps/web/`, `apps/server/`)
+- TypeScript configuration
+- Development tooling (ESLint, Prettier, Vitest)
+- CI/CD pipeline (.github/workflows/)
+
+**Phase 2+ Status:** NOT STARTED
+
+Implementation of business features will begin after Phase 1 infrastructure is in place.
 
 See **todo.md** for detailed roadmap.
 
